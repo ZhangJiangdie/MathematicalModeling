@@ -13,7 +13,7 @@ b_0 = 80000
 
 
 def delta_n(n, b_n):
-    return 0.01 * b_n - 880.87
+    return round(0.01 * b_n - 880.87, 2)
 
 
 N = 20 * 12
@@ -29,10 +29,8 @@ for i in range(N):
         B.append(b_i)
 
 for i in range(len(B)):
-    print("\nn=%d,b_n=%f"%(i,B[i]))
+    print("\nn=%d,b_n=%.2f" % (i, B[i]))
 
 plt.figure()
 plt.scatter(range(len(B)), B)
 plt.show()
-
-
